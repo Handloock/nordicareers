@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 /* ================= LAYOUT ================= */
 function Layout({ children }) {
   return (
-    <div style={styles.app}>
+    <div style={{ width: "100%", minHeight: "100vh" }}>
       <header style={styles.nav}>
         <div style={styles.logo}>Nordic Careers</div>
 
@@ -33,8 +33,8 @@ function Home() {
             <h1 style={styles.h1}>Work as a Chef in Sweden</h1>
 
             <p style={styles.subtitle}>
-              We connect skilled chefs with restaurants across Sweden.
-              Relocation support and accommodation assistance included.
+              We connect skilled chefs with restaurants across Sweden and the Nordic region.
+              Fast placement, relocation support, and accommodation assistance.
             </p>
 
             <Link to="/contact" style={styles.cta}>
@@ -46,7 +46,7 @@ function Home() {
 
       <section style={styles.sectionFull}>
         <h2>Why Sweden?</h2>
-
+        <br></br>
         <p style={styles.text}>
           High demand for chefs, strong salaries, and excellent work-life balance.
           We help you relocate and start working quickly with trusted employers.
@@ -61,6 +61,7 @@ function Home() {
 
       <section style={styles.highlight}>
         <h2>Hiring is open now</h2>
+        <br></br>
         <p>
           Restaurants across Sweden are actively recruiting international chefs.
         </p>
@@ -78,7 +79,7 @@ function About() {
   return (
     <div style={styles.pageFull}>
       <h1>About Nordic Careers</h1>
-
+      <br></br>
       <p style={styles.text}>
         Nordic Careers is a recruitment platform focused on connecting chefs
         and hospitality professionals with employers across Sweden and Scandinavia.
@@ -104,7 +105,7 @@ function Contact() {
         </p>
 
         <a
-          href="mailto:yourfriend@email.com?subject=Chef%20Application%20-%20Nordic%20Careers"
+          href="mailto:ivan.klokov.job@gmail.com?subject=Chef%20Application%20-%20Nordic%20Careers"
           style={styles.emailButton}
         >
           Send Application Email
@@ -167,7 +168,7 @@ const styles = {
 
   /* HERO FULL WIDTH */
   hero: {
-    height: "85vh",
+    height: "90vh",
     width: "100%",
     backgroundImage:
       "url('https://images.unsplash.com/photo-1556910103-1c02745aae4d')",
@@ -181,37 +182,40 @@ const styles = {
   heroOverlay: {
     width: "100%",
     height: "100%",
-    background: "rgba(0,0,0,0.55)",
+    background: "rgba(0,0,0,0.65)",
     display: "flex",
     alignItems: "center"
   },
 
   heroContent: {
-    padding: "60px 30px",
-    maxWidth: "900px"
+  padding: "80px 40px",
+  maxWidth: "720px",
+  marginLeft: "6%",
   },
 
   h1: {
     fontSize: "48px",
-    marginBottom: "12px"
+    marginBottom: "12px",
+    color: "white"
   },
 
   subtitle: {
     fontSize: "18px",
     maxWidth: "600px",
-    lineHeight: "1.6"
+    lineHeight: "1.6",
+    color: "white"
   },
-
   /* BUTTONS */
   cta: {
-    display: "inline-block",
-    marginTop: "25px",
-    padding: "12px 22px",
-    background: "white",
-    color: "black",
-    fontWeight: "bold",
-    textDecoration: "none",
-    borderRadius: "6px"
+  display: "inline-block",
+  marginTop: "25px",
+  padding: "14px 28px",
+  background: "#ffffff",
+  color: "#111",
+  fontWeight: "600",
+  borderRadius: "8px",
+  textDecoration: "none",
+  transition: "0.2s"
   },
 
   secondaryButton: {
@@ -236,9 +240,9 @@ const styles = {
 
   /* SECTIONS FULL WIDTH */
   sectionFull: {
-    padding: "70px 30px",
-    maxWidth: "1100px",
-    margin: "0 auto"
+  padding: "90px 24px",
+  maxWidth: "1100px",
+  margin: "0 auto"
   },
 
   text: {
