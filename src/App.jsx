@@ -99,7 +99,7 @@ function Contact() {
     <div style={styles.applyPage}>
       <div style={styles.applyCard}>
         <h1>Apply as a Chef</h1>
-
+        <br></br>
         <p style={styles.text}>
           Send your application and we will match you with employers in Sweden.
         </p>
